@@ -26,10 +26,10 @@ main {
 }
 
 .campos-obligatorios{
-	position: relative;
-	top:127px;
+	position: absolute;
+	top:145px;
 	font-size: 14px;
-	text-align: right;
+	right: 380px;
 	color: rgb(163, 162, 162)
 }
 
@@ -46,7 +46,7 @@ main {
 	width:900px;
 	margin-top: 30px;
 	margin-left: -110px;
-	height: 450px;
+	height: 520px;
 }
 
 
@@ -57,7 +57,7 @@ main {
 
 .inputWithIcon i {
 	position: absolute;
-	left: 300px;
+	left: 265px;
 	top: 2px;
 	padding: 9px 8px;
 	color: rgb(59, 216, 59);
@@ -216,16 +216,35 @@ main {
 
 .formulario__btns {
 	
+    margin-right: 100%;
+	line-height: 45px;
+	position: relative;
+	left: 13%;
+	width: 70%;
+	background: none;
+	color: rgb(235, 122, 57) ;
+	font-weight: bold;
+	border: rgb(235, 122, 57) 1px solid;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+.formulario__btn {
+	
     
 	line-height: 45px;
-	width: 35%;
-	background: rgb(21, 143, 199);
+	width: 80%;
+	background: linear-gradient(to right, rgb(130, 130, 233), rgb(70, 93, 196));
 	color: #fff;
 	font-weight: bold;
 	border: none;
 	border-radius: 30px;
 	cursor: pointer;
 	transition: .1s ease all;
+	position: relative;
+	left: 120%;
+	top: -50px;
+
 }
 
 
@@ -260,10 +279,36 @@ main {
 
 
 /* ----- -----  Mediaqueries ----- ----- */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
 	.formulario {
 		grid-template-columns: 1fr;
+		height: 80%;
+		margin: -70px;
+		margin-top: 50px;
+		width: 125%;
+		padding: 70px;
 	}
+	.campos-obligatorios{
+		position: relative;
+		left: 60%;
+		margin-left: 50px;
+		top: 130px;
+		
+	
+		
+	}
+	.inputWithIcon i {
+		position: absolute;
+		left: 500px;
+		margin-left:2px;
+		
+		
+	}
+	.overlayinn { 
+		left: 270px;
+		}
+	
+	
 
 	.formulario__grupo-terminos, 
 	.formulario__mensaje,

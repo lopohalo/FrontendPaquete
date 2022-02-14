@@ -12,6 +12,11 @@
 </head>
 <body>
     <main>
+		<p class="campos-obligatorios">Todos los campos son obligatorios</p>
+		<div class="inputWithIco">
+		<h1 class="diligencia">Diligencia tus datos</h1>
+		<i class="fa-solid fa-arrow-left"></i>
+		</div>
 		<form action="" class="formulario" id="formulario">
 
             	<!-- Grupo: Nombre -->
@@ -48,7 +53,13 @@
 				<div class="formulario__grupo-input">
 				  <div class="inputWithIcon">
 					<input type="text" class="input-icono" name="celular" id="celular"  placeholder="3101234567">
-					<i class="fa-brands fa-whatsapp"></i>
+					
+					<div class="overlayone">
+						<i class="fa-brands fa-whatsapp"></i>
+						<div class="overlayinn">
+							<h1 class="overlay">Notificaciones Whatsapp</h1>
+							Por whatsapp podrías recibir notificaciones para facilitar tu proceso de envíos.</div>
+						</div>
 				</div>
 			
 				</div>
@@ -64,6 +75,7 @@
 				</div>
 				<p class="formulario__input-error">*Por favor ingresa una ciudad valida. </p>
 			</div>
+			
 
 			
 			<div class="formulario__grupo" id="grupo__direccion">
@@ -75,13 +87,7 @@
 				<p class="formulario__input-error">*ingresa una dirección de recogida.</p>
 			</div>
            
-		
-
-			<div class="formulario__mensaje" id="formulario__mensaje">
-				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-			</div>
 			<div class="formulario__grupo formulario__grupo-btn-Cancelar">
-
 			<div>
                 <button 
                     type="submit"

@@ -16,6 +16,22 @@ main {
 	margin: auto;
 	padding: 50px;
 }
+.diligencia{
+	position: relative;
+	top:90px;
+	font-size: 20px;
+	font: oblique bold 120% cursive;
+	color: rgb(90, 88, 88);
+	left: 26px;
+}
+
+.campos-obligatorios{
+	position: relative;
+	top:127px;
+	font-size: 14px;
+	text-align: right;
+	color: rgb(163, 162, 162)
+}
 
 .formulario {
 	display: grid;
@@ -25,9 +41,8 @@ main {
 	flex-direction: column;
 	align-items: center;
 	padding-top: 0.5rem;
-	border-radius: 30px;
-    
-	padding: 100px;
+	border-radius: 15px;
+	padding: 120px;
 	width:900px;
 	margin-top: 30px;
 	margin-left: -110px;
@@ -49,7 +64,51 @@ main {
     font-size: 25px;
 	
 }
+.inputWithIco{
+	position: relative;
+}
 
+.inputWithIco i {
+	position: absolute;
+	left: -23px;
+	top:85px;
+	padding: 9px 8px;
+	color: rgb(236, 126, 0);
+    font-size: 20px;
+	
+}
+
+	.overlayinn { /* Propiedades de la transparencia */
+	background-color: rgba(226, 226, 226, 0.6);
+	width: 300px; /* ancho del contenedor de texto */
+	height: 100px; /* alto del contenedor de texto */
+	top: -70px; /*distancia hacia abajo*/
+	left: 80px; /*distancia hacia la derecha*/
+	opacity: 0; /* esta condicion mantiene el texto oculto */
+	position: absolute;
+	transition: opacity .30s;
+	text-align: center;/* texto centrado */
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px; /* tama�o de letra */
+	color:#666060;
+	border-radius: 30px;
+	line-height: 120%;
+	font-family: monospace;
+	box-shadow: 2px 2px 15px rgb(118, 118, 214)
+	}
+	.overlayinn:hover { /* Efecto al pasar el mouse */
+	opacity: 1;
+	transition: opacity .5s;
+	
+
+	}
+   
+	.overlay{
+		text-align: center;
+		font-size: 9px;
+		color: black;
+		font: oblique bold 120% cursive;
+	}
 
 
 .input-icono {
@@ -182,17 +241,20 @@ main {
 }
 
 /* ----- -----  Estilos para Validacion ----- ----- */
-.formulario__grupo-correcto .formulario__validacion-estado {
-	color: #1ed12d;
-	opacity: 1;
-}
+
 
 .formulario__grupo-incorrecto .formulario__input-error {
+	color: #bb2929;
+}
+.formulario__grupo-incorrecto .input-icono{
 	color: #bb2929;
 }
 
 
 .formulario__grupo-incorrecto .formulario__input {
+	border-bottom: 3px solid rgb(206, 31, 31);
+}
+.formulario__grupo-incorrecto .input-icono {
 	border-bottom: 3px solid rgb(206, 31, 31);
 }
 

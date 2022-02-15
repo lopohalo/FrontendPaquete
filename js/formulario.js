@@ -1,6 +1,7 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
+
 const expresiones = {
 	apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras, numeros, guion y guion_bajo
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -18,24 +19,12 @@ const campos = {
 	direccion: false
 }
 
+
 const validarFormulario = (e) => {
-	switch (e.target.name) {
-		case "apellido":
-			validarCampo(expresiones.apellido, e.target, 'apellido');
-		break;
-		case "nombre":
-			validarCampo(expresiones.nombre, e.target, 'nombre');
-		break;
-		case "correo":
-			validarCampo(expresiones.correo, e.target, 'correo');
-		break;
-		case "celular":
-			validarCampo(expresiones.celular, e.target, 'celular');
-		break;
-		case "direccion":
-			validarCampo(expresiones.direccion, e.target, 'direccion');
-	}
-}
+    let input_name = e.target.name;
+    validarCampo(expresiones[input_name], e.target, input_name);
+};
+
 
 const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
@@ -50,6 +39,20 @@ const validarCampo = (expresion, input, campo) => {
 	}
 }
 
+document.getElementById('boton').onclick = () => {
+	document.getElementById('boton').classList.add('formulario__btns-i');
+	setTimeout(() => {
+		document.getElementById('boton').classList.remove('formulario__btns-i');
+	}, 1000);
+  }
+
+  document.getElementById('botones').onclick = () => {
+	document.getElementById('botones').classList.add('formulario__btns-i');
+	setTimeout(() => {
+		document.getElementById('botones').classList.remove('formulario__btns-i');
+	}, 1000);
+  }
+
 
 
 inputs.forEach((input) => {
@@ -62,13 +65,15 @@ formulario.addEventListener('submit', (e) => {
 
 	if(campos.apellido && campos.nombre && campos.ciudad && campos.correo && campos.celular && campos.direccion){
 		formulario.reset();
+		
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
 		}, 5000);
 
-	} else {
-	
+	} else {	
+  	document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+		
 	}
 });

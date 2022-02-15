@@ -67,6 +67,7 @@
 			</div>
 
 			<!-- Grupo: Ciudad -->
+			
 			<div class="formulario__grupo" id="grupo__ciudad">
 				<label for="ciudad" class="formulario__label">Ciudad</label>
 				<div class="formulario__grupo-input">
@@ -90,18 +91,22 @@
 			<div class="formulario__grupo formulario__grupo-btn-Cancelar">
 			<div>
                 <button 
-                    type="submit"
+                    type="button"
                     class="formulario__btns"
+					id="boton"
                     
                 >Cancelar</button>
 			<div> 
                 <button
-                    type="button"
+                    type="submit"
                     class="formulario__btn"
+					id="botones"
                                             
                 >Continuar</button>
 				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-        
+				<div class="formulario__mensaje" id="formulario__mensaje">
+					<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+				</div>
 		</div>
 			</div>
 		</form>

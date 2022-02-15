@@ -229,6 +229,10 @@ main {
 	cursor: pointer;
 	transition: .1s ease all;
 }
+.formulario__btns-i{
+	
+	transform: scale(0.9);
+}
 .formulario__btn {
 	
     
@@ -317,6 +321,14 @@ main {
 	}
 
 	.formulario__btn {
-		width: 100%;
+		position: relative;
+		left: -5%;
+		width: 110%
+	}
+	.formulario__btns {
+		position: relative;
+		left: -5%;
+		width: 110%;
+		top: 60px;
 	}
 }
